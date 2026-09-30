@@ -320,6 +320,15 @@
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
     }
+    .brand-text { white-space: normal; max-width: 220px; font-size: 14px; letter-spacing: .02em; line-height: 1.2; }
+    .nav-link { white-space: nowrap; }
+    @media (max-width: 1240px) {
+      .nav-list { display: none; position: fixed; inset: var(--header-h) 0 auto 0; flex-direction: column; background: #fff; padding: 12px 16px 24px; border-bottom: 1px solid var(--line); box-shadow: 0 20px 30px rgba(35,58,128,.08); }
+      .nav-list.open { display: flex; }
+      .nav-link { font-size: 18px; padding: 12px 8px; border-bottom: 1px solid var(--line); }
+      .menu-toggle { display: flex; }
+    }
+    @media (max-width: 620px) { .brand-text { font-size: 12.5px; max-width: 170px; } }
   </style>
 </head>
 <body>
@@ -363,7 +372,7 @@
     <div class="container hero-grid">
       <div class="reveal">
         <span class="eyebrow"><span lang="pt">Projeto de Investigação</span><span lang="en">Research Project</span></span>
-        <h1 class="serif hero-title rainbow-title"><span lang="pt">Do Acolhimento Familiar à Adoção</span><span lang="en">From Foster Care to Adoption</span></h1>
+     <h1><span lang="pt">Do Acolhimento Familiar à Adoção</span><span lang="en">From Foster Care to Adoption</span></h1>
         <p class="hero-sub" lang="pt">Para que a passagem do acolhimento familiar à adoção seja para todos vivida de forma gradual, colaborativa e centrada no bem-estar da criança!
 </p>
         <p class="hero-sub" lang="en">So that the move from foster care to adoption is experienced, by everyone involved, as a gradual, collaborative and centred on every child's well-being process!</p>
