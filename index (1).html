@@ -3,20 +3,13 @@
   Website do projeto de investigação / Research project website
   Estilo inspirado em "Lumen Eighty" da TemplateMo (template gratuito)
   https://templatemo.com/tm-628-lumen-eighty
-
-  COMO EDITAR / HOW TO EDIT
-  - Cada texto aparece duas vezes, lado a lado: lang="pt" (português) e lang="en" (inglês).
-    Edite os dois. / Every text appears twice: lang="pt" and lang="en". Edit both.
-  - Tudo o que está entre [parênteses retos] é texto provisório para substituir.
-  - As cores estão no início do bloco <style> (procure "CORES").
-  - Para trocar as iniciais da equipa por fotografias, veja o comentário na secção EQUIPA.
 -->
 <html lang="pt-PT" data-lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Nome do Projeto] · Projeto de Doutoramento</title>
-  <meta name="description" content="[Uma frase a descrever o projeto, escrita para famílias e para o público.]">
+  <title>Projeto de Investigação "Do Acolhimento Familiar à Adoção"</title>
+  <meta name="description" content="Para que a passagem do acolhimento familiar à adoção seja para todos vivida de forma gradual, colaborativa e centrada no bem-estar das crianças!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
@@ -316,6 +309,17 @@
       .method-table td { padding-top: 4px; border-left: 6px solid transparent; }
       .faq .answer { padding-right: 0; }
     }
+        /* Colorful gradient title */
+    .rainbow-title span {
+      background: linear-gradient(100deg,
+        var(--navy) 0%, var(--plum) 22%, var(--raspberry) 40%,
+        var(--orange) 58%, #e0a800 70%, var(--green) 84%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
   </style>
 </head>
 <body>
@@ -327,14 +331,14 @@
       <span class="brand-mark" aria-hidden="true">
         <i style="background:var(--plum)"></i><i style="background:var(--raspberry)"></i><i style="background:var(--orange)"></i><i style="background:var(--yellow)"></i><i style="background:var(--green)"></i><i style="background:var(--teal)"></i>
       </span>
-      <span class="brand-text"><span lang="pt">[NOME DO PROJETO]</span><span lang="en">[PROJECT NAME]</span></span>
+      <span class="brand-text"><span lang="pt">Do Acolhimento à Adoção</span><span lang="en">From Foster Care to Adoption</span></span>
     </a>
     <nav aria-label="Menu">
       <ul class="nav-list" id="navList">
         <li><a class="nav-link" href="#about"><span lang="pt">O projeto</span><span lang="en">About</span></a></li>
         <li><a class="nav-link" href="#methods"><span lang="pt">Metodologia</span><span lang="en">Methods</span></a></li>
-        <li><a class="nav-link" href="#advisory"><span lang="pt">Grupo Consultivo</span><span lang="en">Youth Advisory Group</span></a></li>
-        <li><a class="nav-link" href="#families"><span lang="pt">Famílias</span><span lang="en">Families</span></a></li>
+        <li><a class="nav-link" href="#advisory"><span lang="pt">Grupo Consultivo</span><span lang="en">Children Advisory Group</span></a></li>
+        <li><a class="nav-link" href="#families"><span lang="pt">FAQ do Grupo Consultivo</span><span lang="en">FAQ regarding the Children Advisory Group</span></a></li>
         <li><a class="nav-link" href="#results"><span lang="pt">Resultados</span><span lang="en">Results</span></a></li>
         <li><a class="nav-link" href="#team"><span lang="pt">Equipa</span><span lang="en">Team</span></a></li>
         <li><a class="nav-link" href="#contact"><span lang="pt">Contactos</span><span lang="en">Contact</span></a></li>
@@ -358,15 +362,16 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="reveal">
-        <span class="eyebrow"><span lang="pt">Projeto de Doutoramento · [2026–2030]</span><span lang="en">PhD Research Project · [2026–2030]</span></span>
-        <h1 class="serif hero-title"><span lang="pt">[Nome do <em>Projeto</em>]</span><span lang="en">[Project <em>Name</em>]</span></h1>
-        <p class="hero-sub" lang="pt">[Um subtítulo curto e simpático que diga do que trata o projeto]</p>
-        <p class="hero-sub" lang="en">[A short, friendly subtitle that says what the project is about]</p>
-        <p class="lede" lang="pt">[Duas ou três frases em linguagem simples: o que quer compreender, com quem e porque é importante para as crianças e as famílias. Imagine um pai ou uma mãe a ler isto pela primeira vez.]</p>
-        <p class="lede" lang="en">[Two or three sentences in plain language: what you want to understand, with whom, and why it matters for children and families. Imagine a parent reading this for the first time.]</p>
+        <span class="eyebrow"><span lang="pt">Projeto de Investigação</span><span lang="en">Research Project</span></span>
+        <h1 class="serif hero-title rainbow-title"><span lang="pt">Do Acolhimento Familiar à Adoção</span><span lang="en">From Foster Care to Adoption</span></h1>
+        <p class="hero-sub" lang="pt">Para que a passagem do acolhimento familiar à adoção seja para todos vivida de forma gradual, colaborativa e centrada no bem-estar da criança!
+</p>
+        <p class="hero-sub" lang="en">So that the move from foster care to adoption is experienced, by everyone involved, as a gradual, collaborative and centred on every child's well-being process!</p>
+        <p class="lede" lang="pt">O nosso projeto procura compreender como famílias (de acolhimento e adoção) e crianças vivem a transição do acolhimento familiar para a adoção, bem como a forma como os profissionais suportam estes processos transitórios.</p>
+        <p class="lede" lang="en">Our project aims to understand how families and children experience the transition process from foster care to adoption, as well as the ways through which practitioners support these processes.</p>
         <div class="hero-actions">
           <a href="#about" class="btn btn-solid"><span lang="pt">Conhecer o projeto</span><span lang="en">About the project</span></a>
-          <a href="#families" class="btn"><span lang="pt">Informação para famílias</span><span lang="en">Information for families</span></a>
+          <a href="#families" class="btn"><span lang="pt">FAQ do Grupo Consultivo</span><span lang="en">FAQ regarding the Children Advisory Group</span></a>
         </div>
       </div>
       <div class="hero-art reveal" aria-hidden="true">
@@ -382,9 +387,9 @@
   <section class="band band-plum quote-band">
     <div class="container reveal">
       <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-      <p class="serif big-quote" lang="pt">[A sua pergunta de investigação principal, escrita de forma simples: p. ex. “Como é que as crianças vivem…?”]</p>
-      <p class="serif big-quote" lang="en">[Your main research question, written simply: e.g. “How do children experience…?”]</p>
-      <p class="quote-attr"><span lang="pt">A pergunta que orienta este projeto</span><span lang="en">The question guiding this project</span></p>
+      <p class="serif big-quote" lang="pt">Como é que as crianças e famílias vivem as transições? Como é que os profissionais as suportam? De que modo podemos melhor apoiá-las?</p>
+      <p class="serif big-quote" lang="en">How do children and families experience transitions? How do practitioners support them? In which ways can we optimally aid these processes?</p>
+      <p class="quote-attr"><span lang="pt">As pergunta que orientam o nosso projeto</span><span lang="en">The questions that guide this project</span></p>
     </div>
   </section>
 
@@ -444,10 +449,10 @@
       <h3 class="table-title reveal"><span lang="pt">Visão geral do estudo</span><span lang="en">Study overview</span></h3>
       <table class="method-table reveal">
         <tbody>
-          <tr class="c-plum" style="--bar:var(--plum)">
+          <tr class="c-plum" ="--bar:var(--plum)">
             <th scope="row"><span lang="pt">Desenho</span><span lang="en">Design</span></th>
             <td><span lang="pt">[p. ex. Estudo qualitativo, longitudinal e participativo]</span><span lang="en">[e.g. Qualitative, longitudinal, participatory study]</span></td></tr>
-          <tr class="c-raspberry" style="--bar:var(--raspberry)">
+          <tr class="c-raspberry" ="--bar:var(--raspberry)">
             <th scope="row"><span lang="pt">Participantes</span><span lang="en">Who takes part</span></th>
             <td><span lang="pt">[p. ex. Crianças dos 8 aos 12 anos, os seus pais ou cuidadores e profissionais]</span><span lang="en">[e.g. Children aged 8–12, their parents or carers, and professionals]</span></td></tr>
           <tr class="c-orange" style="--bar:var(--orange)">
