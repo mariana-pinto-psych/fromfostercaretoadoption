@@ -501,8 +501,6 @@
           <p lang="pt">As crianças colaboram na construção do projeto, através do Grupo Consultivo</p>
           <p lang="en">Young people collaborate in shaping the project, through the Advisory Group</p></div>
       </div>
-
-      <ol class="timeline reveal">
              <div class="reveal" id="timeline" style="margin-top:70px">
         <h3 class="table-title"><span lang="pt">Onde estamos</span><span lang="en">Where we are</span></h3>
         <!-- Para mudar uma etapa, edite data-start e data-end (ano-mês). O estado atualiza-se sozinho. -->
@@ -536,7 +534,6 @@
               <h3><span lang="pt">Escrita da tese e partilha das conclusões</span><span lang="en">Thesis writing and sharing results</span></h3>
               <span class="status"></span>
             </li>
-          </ol>
         </div>
         <p class="road-hint"><span lang="pt">Deslize para o lado para ver as etapas →</span><span lang="en">Swipe sideways to see all stages →</span></p>
         <p class="road-note" lang="pt">Ao longo do projeto, vamos partilhando o que aprendemos em diferentes formatos.</p>
@@ -763,7 +760,10 @@
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
   }
-    /* ===== PERCURSO: estados e "Estamos aqui" ===== */
+   
+</script>
+  <script>
+  /* ===== PERCURSO: estados e "Estamos aqui" ===== */
   (function () {
     var now = new Date(), placed = false;
     var L = { done: ['Concluído', 'Completed'], now: ['A decorrer', 'In progress'], next: ['Por começar', 'Coming up'] };
