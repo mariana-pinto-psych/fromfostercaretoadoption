@@ -10,9 +10,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Do Acolhimento Familiar à Adoção</title>
   <meta name="description" content="Para que a passagem do acolhimento familiar à adoção seja para todos vivida de forma gradual, colaborativa e centrada no bem-estar das crianças!">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    /* ===== FONTES ===== */
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-300-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/cormorant-garamond-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 500; font-display: swap; src: url('fonts/cormorant-garamond-latin-500-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 600; font-display: swap; src: url('fonts/cormorant-garamond-latin-600-italic.woff2') format('woff2'); }
   <style>
     /* ================= CORES / COLOURS ================= */
     :root {
@@ -342,6 +349,10 @@
     .contact-dot { flex: none; width: 12px; height: 28px; background: var(--c); transform: skewX(-10deg); margin-top: 3px; }
     .contact-card-list strong { display: block; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--c); }
     @media (max-width: 900px) { .contact-card { grid-template-columns: 1fr; gap: 36px; padding: 40px 24px; } }
+
+        .privacy-note { font-size: 13px; color: var(--muted); max-width: 80ch; margin-bottom: 24px; }
+    .privacy-note strong { color: var(--navy); }
+    
   </style>
 </head>
 <body>
@@ -662,6 +673,8 @@
       <div class="logo-slot"><span lang="pt">[Logótipo do centro de investigação]</span><span lang="en">[Research centre logo]</span></div>
       <div class="logo-slot"><span lang="pt">[Logótipo da entidade financiadora]</span><span lang="en">[Funder logo]</span></div>
     </div>
+        <p class="privacy-note" lang="pt"><strong>Privacidade:</strong> este site não utiliza cookies nem recolhe dados pessoais. A única informação guardada no seu navegador é a língua escolhida (PT/EN), que nunca sai do seu dispositivo. O site está alojado no GitHub Pages, que pode registar dados técnicos de acesso, como o endereço IP, por motivos de segurança.</p>
+    <p class="privacy-note" lang="en"><strong>Privacy:</strong> this website does not use cookies or collect personal data. The only information stored in your browser is your language choice (PT/EN), which never leaves your device. The site is hosted on GitHub Pages, which may log technical access data, such as IP addresses, for security purposes.</p>
     <div class="footer-base">
       <span>© [2026] <span lang="pt">[O seu nome] · [Financiamento, p. ex. "Financiado pela FCT, ref.ª …"]</span><span lang="en">[Your Name] · [Funding statement, e.g. "Funded by FCT, ref. …"]</span></span>
       <span><span lang="pt">Design inspirado em</span><span lang="en">Design inspired by</span> <a href="https://templatemo.com/tm-628-lumen-eighty">Lumen Eighty</a> (TemplateMo)</span>
