@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
   Website do projeto de investigação / Research project website
@@ -404,6 +405,126 @@
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
     }
+  
+    /* =====================================================================
+       ALTERAÇÕES DECIDIDAS (outubro 2026)
+       ===================================================================== */
+    /* Fundos das faixas mais claros */
+    .band-plum   { --band: #fbf5f9; }
+    .band-teal   { --band: #f1fafb; }
+    .band-yellow { --band: #fffaea; }
+    .band-green  { --band: #f5faf4; }
+
+    /* Botões e menu em azul-escuro (o vermelho fica para links e "Estamos aqui") */
+    .btn-solid { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .btn-solid:hover { background: var(--plum); border-color: var(--plum); color: #fff; }
+    .nav-link:hover { color: var(--navy); background: #eef0f8; }
+    .nav-link.is-active { color: var(--navy); box-shadow: inset 0 -2px 0 var(--navy); }
+
+    /* Cabeçalho: nome sem as riscas coloridas */
+    .brand-mark { display: none; }
+
+    /* ===== PERGUNTAS DO PROJETO ===== */
+    .questions-band { padding: 120px 0; }
+    .questions-label { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 44px; }
+    .questions { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .questions li { border-top: 3px solid var(--col); padding-top: 22px; }
+    .q-num { font-family: var(--font-serif); font-style: italic; font-weight: 600; font-size: 28px; line-height: 1; color: var(--col); }
+    .q-text { font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.25; color: var(--navy); margin-top: 12px; }
+    @media (max-width: 860px) { .questions { grid-template-columns: 1fr; gap: 30px; } .questions-band { padding: 90px 0; } }
+
+    /* ===== O PROJETO: três passos + caixa de factos ===== */
+    .about-steps { display: grid; gap: 26px; margin-top: 8px; }
+    .about-step { position: relative; padding-left: 22px; }
+    .about-step::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; background: var(--col); border-radius: 2px; }
+    .about-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--col); margin-bottom: 4px; }
+    .about-step p { font-size: 16.5px; line-height: 1.75; }
+    .about-step p + p { margin-top: 0; }
+    #about .facts { background: #f7f8fc; border-top: 0; padding: 10px 28px; align-self: start; position: relative; }
+    #about .facts::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--navy); }
+    #about .facts li:last-child { border-bottom: 0; }
+    @media (max-width: 620px) { #about .facts { padding: 6px 18px; } }
+    #about .split { align-items: center; }
+    .f2f { font-weight: 700; color: var(--navy); white-space: nowrap; padding: 0 2px; background: linear-gradient(transparent 58%, #fde7a6 58%, #fde7a6 92%, transparent 92%); }
+    .inst-list { display: grid; gap: 12px; }
+    .inst-item b { display: block; font-weight: 600; color: var(--navy); line-height: 1.4; }
+    .inst-item small { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+
+    /* ===== METODOLOGIA: itens leves com ícones ===== */
+    .methods-light { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin-bottom: 20px; }
+    .m-icon { width: 80px; height: 80px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--col) 16%, white); }
+    .m-icon svg { width: 38px; height: 38px; fill: none; stroke: var(--col); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .m-item h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 18px 0 6px; }
+    .m-item p { font-size: 14.5px; color: var(--muted); line-height: 1.65; }
+    @media (max-width: 1000px) { .methods-light { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .methods-light { grid-template-columns: 1fr; gap: 28px; } }
+    .methods-light { gap: 18px; }
+    .m-item { background: #fff; border: 1px solid var(--line); padding: 34px 28px 30px; }
+    #methods .section-title { margin-bottom: 40px; }
+
+    /* ===== ONDE ESTAMOS AGORA (etapa em destaque) ===== */
+    .now-title { font-family: var(--font-serif); font-weight: 600; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1; color: var(--navy); text-align: center; margin: 90px 0 40px; }
+    .now-title em { font-style: italic; font-weight: 500; color: var(--plum); }
+    .now-card { display: grid; grid-template-columns: 1.5fr 1fr; background: #fff; box-shadow: 0 16px 36px rgba(35,58,128,.08); }
+    .now-left { padding: 40px 44px; border-left: 6px solid var(--col, var(--orange)); }
+    .now-pill { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 12px; border-radius: 999px; background: var(--raspberry); color: #fff; }
+    .now-stage { font-family: var(--font-serif); font-weight: 600; font-size: clamp(28px, 3vw, 36px); line-height: 1.12; color: var(--navy); margin: 12px 0 10px; }
+    .now-count { color: var(--muted); }
+    .now-right { padding: 40px 44px; background: #fbfcfe; border-left: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; }
+    .now-pct { font-family: var(--font-serif); font-weight: 600; font-size: 72px; line-height: 1; color: var(--navy); }
+    .now-pct small { font-size: 28px; }
+    .now-right p { font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .now-bar { height: 10px; border-radius: 5px; background: #e6e9f3; overflow: hidden; margin-top: 16px; }
+    .now-bar i { display: block; height: 100%; width: 0; border-radius: 5px; background: linear-gradient(90deg, var(--plum), var(--orange), var(--green), var(--teal)); background-size: 400% 100%; }
+    .now-steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 22px; }
+    .now-steps li { display: flex; gap: 10px; align-items: baseline; font-size: 14px; font-weight: 500; color: var(--muted); line-height: 1.4; }
+    .now-steps li::before { content: ''; flex: none; width: 12px; height: 12px; border-radius: 50%; background: color-mix(in srgb, var(--col) 35%, white); transform: translateY(1px); }
+    .now-steps li.is-done, .now-steps li.is-now { color: var(--navy); font-weight: 600; }
+    .now-steps li.is-done::before, .now-steps li.is-now::before { background: var(--col); }
+    .now-steps li.is-done > span::before { content: '✓ '; color: var(--green); }
+    @media (max-width: 860px) {
+      .now-card { grid-template-columns: 1fr; }
+      .now-right { border-left: 0; border-top: 1px solid var(--line); }
+      .now-left, .now-right { padding: 30px 26px; }
+      .now-steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) { .now-steps { grid-template-columns: 1fr; } }
+
+    /* Equipa: círculos pequenos e suaves (prontos para avatares) */
+    .person .avatar { width: 128px; height: 128px; aspect-ratio: auto; border-radius: 50%;
+      background: color-mix(in srgb, var(--bar) 14%, white); color: var(--bar);
+      font-size: 40px; box-shadow: 0 0 0 4px #fff, 0 0 0 6px color-mix(in srgb, var(--bar) 35%, white); }
+    .person .avatar::after { display: none; }
+    .person .avatar img { border-radius: 50%; }
+    .person h3 { margin-top: 22px; }
+    #team .team-grid { margin-top: 36px; }
+
+    /* ===== RODAPÉ com contactos ===== */
+    .site-footer { border-top: 1px solid var(--line); padding-top: 70px; }
+    .footer-top { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; margin-bottom: 44px; }
+    .footer-contact-text { margin-top: 16px; color: var(--muted); font-size: 15px; }
+    .footer-mail { display: inline-block; margin-top: 4px; font-family: var(--font-serif); font-size: clamp(22px, 2.2vw, 28px); font-weight: 600; color: var(--navy); border-bottom: 2px solid var(--raspberry); word-break: break-all; }
+    .footer-mail:hover { color: var(--raspberry); }
+    .footer-address { margin-top: 16px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .footer-top .funders { margin-bottom: 0; }
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr; gap: 40px; } }
+      /* Contactos em secção própria */
+    .contact-simple { padding: 120px 0; text-align: center; }
+    .contact-simple .eyebrow { justify-content: center; }
+    .contact-simple .section-title { margin-bottom: 10px; }
+    .contact-simple .section-title em { color: var(--plum); }
+    .contact-simple .footer-mail { font-size: clamp(24px, 3vw, 36px); }
+    .footer-top { grid-template-columns: 1fr; }
+      .site-footer { border-top: 0; padding-top: 40px; }
+      /* Contactos só em azul */
+    .contact-simple .section-title em { color: var(--navy); }
+    .contact-simple .footer-mail { border-bottom-color: var(--navy); }
+    .contact-simple .footer-mail:hover { color: var(--plum); border-bottom-color: var(--plum); }
+      /* Perguntas: estilo citação, uma por linha */
+    .q-lines { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; }
+    .q-lines p { font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: clamp(24px, 2.8vw, 34px); line-height: 1.25; color: var(--navy); }
+    .q-lines p + p { padding-top: 14px; border-top: 1px solid color-mix(in srgb, var(--plum) 25%, white); }
+      #advisory .yag-grid { align-items: center; }
   </style>
 </head>
 <body>
@@ -445,8 +566,8 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="reveal">
-        <span class="eyebrow"><span lang="pt">Projeto de Investigação</span><span lang="en">Research Project</span></span>
-<h1 class="serif hero-title"><span lang="pt">Do Acolhimento Familiar à <span class="rainbow">Adoção</span></span><span lang="en">From Foster Care to <span class="rainbow">Adoption</span></span></h1></p>
+        <span class="eyebrow c-raspberry"><span lang="pt">Projeto de Investigação</span><span lang="en">Research Project</span></span>
+<h1 class="serif hero-title"><span lang="pt">Do Acolhimento Familiar à <span class="rainbow">Adoção</span></span><span lang="en">From Foster Care to <span class="rainbow">Adoption</span></span></h1>
 <p class="lede" lang="pt">Para que o «entre casas» seja vivido de forma gradual, partilhada e centrada em cada criança.</p>
 <p class="lede" lang="en">So that the time "between homes" is lived gradually, together, and centred on each child.</p>       
  <div class="hero-actions">
@@ -483,8 +604,16 @@
   <section class="band band-plum quote-band">
     <div class="container reveal">
       <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-      <p class="serif big-quote" lang="pt">Como é que as crianças e famílias vivem as transições? <br>Como é que os profissionais as suportam?<br> De que modo podemos melhor apoiá-las?</p>
-      <p class="serif big-quote" lang="en">How do children and families experience transitions? How do practitioners support them? In which ways can we optimally aid these processes?</p>
+      <div class="q-lines" lang="pt">
+        <p>Como é que as crianças e as famílias vivem as transições?</p>
+        <p>Como é que os profissionais as acompanham?</p>
+        <p>De que modo podemos apoiá-las melhor?</p>
+      </div>
+      <div class="q-lines" lang="en">
+        <p>How do children and families experience transitions?</p>
+        <p>How do practitioners support them?</p>
+        <p>How can we best support these processes?</p>
+      </div>
       <p class="quote-attr"><span lang="pt">As perguntas que orientam o nosso projeto</span><span lang="en">The questions that guide this project</span></p>
     </div>
   </section>
@@ -493,21 +622,36 @@
   <section class="section" id="about">
     <div class="container split">
       <div class="reveal">
-        <span class="eyebrow c-raspberry"><span lang="pt">O projeto</span><span lang="en">About the project</span></span>
-        <h2 class="serif section-title"><span lang="pt">Porque é <em>importante</em></span><span lang="en">Why this <em>matters</em></span></h2>
-        <p lang="pt">Durante a procura por soluções permanentes para crianças em risco, é importante garantirmos que as medidas de cuidado temporárias fornecidas favoreçam trajetórias de desenvolvimento e bem-estar. Sabendo que a institucionalização das crianças comporta prejuízos claros para o desenvolvimento, existe uma tendência internacional para a desinstitucionalização, priorizando soluções familiares ou comunitárias. Em Portugal, este esforço tem-se concretizado através da promoção da medida de acolhimento familiar </p>
-        <p lang="en">[Paragraph 1: the context. What is the issue, and why do we need to know more about it? Keep sentences short and avoid jargon.]</p>
-        <p lang="pt">Contudo, novas questões têm emergido na preparação destas crianças para a adoção. De facto, preparar e apoiar as crianças e os adultos envolvidos para transições "entre famílias" é significativamente diferente de preparar crianças vindas de um contexto institucional. Motivados por esta questão, desenvolvemos o programa “Family to Family”, num diálogo colaborativo entre investigação e prática, que propõe uma estrutura orientadora para profissionais envolvidos nestas transições</p>
-        <p lang="en"></p>
-        <p lang="pt"> Este projeto tem como objetivo capturar a complexidade das transições apoiadas pelo programa “Family to Family”, procurando contribuir com uma teoria para a compreensão aprofundada e complexificada de como as transições ocorrem e como as podemos suportar e Práticas de apoio nacionais mais sensíveis, relacionais e contextualizadas, através da otimização e implementação em grande escala do Programa Family to Family</p>
-        <p lang="en">[Paragraph 3 (optional): the values behind the project, e.g. children's participation and listening to young people's voices.]</p>
+        <span class="eyebrow c-plum"><span lang="pt">O projeto</span><span lang="en">About the project</span></span>
+        <h2 class="serif section-title"><span lang="pt">Entre <em>duas</em> famílias</span><span lang="en">Between <em>two</em> families</span></h2>
+        <div class="about-steps">
+          <div class="about-step" style="--col:var(--teal)">
+            <span class="about-label"><span lang="pt">O contexto</span><span lang="en">The context</span></span>
+            <p lang="pt">Quando uma criança não pode viver com a sua família, é essencial que os cuidados temporários que recebe protejam o seu desenvolvimento e bem-estar. Por isso, em Portugal e noutros países, tem-se dado prioridade ao acolhimento em família, em vez do acolhimento em instituições.</p>
+            <p lang="en">When a child cannot live with their family, the temporary care they receive must protect their development and wellbeing. That is why Portugal, like many other countries, has been prioritising foster families over residential care.</p>
+          </div>
+          <div class="about-step" style="--col:var(--orange)">
+            <span class="about-label"><span lang="pt">O desafio</span><span lang="en">The challenge</span></span>
+            <p lang="pt">Quando uma criança em acolhimento familiar vai ser adotada, passa de uma família para outra. Preparar e apoiar esta transição "entre famílias" é muito diferente de preparar uma criança que sai de uma instituição. Para responder a esta necessidade, desenvolvemos o programa <strong class="f2f">Family to Family</strong>, em diálogo entre investigação e prática, que orienta os profissionais que acompanham estas transições.</p>
+            <p lang="en">When a child in foster care is adopted, they move from one family to another. Preparing and supporting this transition "between families" is very different from preparing a child who leaves residential care. To respond to this need, we developed the <strong class="f2f">Family to Family</strong> programme, in dialogue between research and practice, to guide the practitioners who accompany these transitions.</p>
+          </div>
+          <div class="about-step" style="--col:var(--green)">
+            <span class="about-label"><span lang="pt">O nosso objetivo</span><span lang="en">Our aim</span></span>
+            <p lang="pt">Queremos compreender, em profundidade, como estas transições acontecem e como podem ser apoiadas, contribuindo para práticas mais sensíveis, próximas e adaptadas a cada criança, e para o alargamento do programa <strong class="f2f">Family to Family</strong> a nível nacional.</p>
+            <p lang="en">We want to understand in depth how these transitions happen and how they can be supported, contributing to more sensitive, relational practices tailored to each child, and to scaling up the <strong class="f2f">Family to Family</strong> programme nationally.</p>
+          </div>
+        </div>
       </div>
       <ul class="facts reveal">
-                <li class="c-plum"><strong><span lang="pt">Investigadora</span><span lang="en">Researcher</span></strong><span><span lang="pt">Mariana Pinto, investigadora de doutoramento</span><span lang="en">Mariana Pinto, PhD Researcher</span></span></li>
-        <li class="c-green"><strong><span lang="pt">Instituições</span><span lang="en">Institutions</span></strong><span><span lang="pt">Centro de Psicologia da Universidade do Porto, Faculdade de Psicologia e de Ciências da Educação<br>ProChild CoLAB – Contra a Pobreza e a Exclusão Social</span><span lang="en">Center for Psychology at the University of Porto, Faculty of Psychology and Education Sciences<br>ProChild CoLAB Against Poverty and Social Exclusion</span></span></li>
+        <li class="c-plum"><strong><span lang="pt">Investigadora</span><span lang="en">Researcher</span></strong><span><span lang="pt">Mariana Pinto, investigadora de doutoramento</span><span lang="en">Mariana Pinto, PhD Researcher</span></span></li>
+        <li class="c-green"><strong><span lang="pt">Instituições</span><span lang="en">Institutions</span></strong>
+          <span class="inst-list">
+            <span class="inst-item"><b><span lang="pt">Centro de Psicologia da Universidade do Porto</span><span lang="en">Center for Psychology at the University of Porto</span></b><small><span lang="pt">Faculdade de Psicologia e de Ciências da Educação</span><span lang="en">Faculty of Psychology and Education Sciences</span></small></span>
+            <span class="inst-item"><b>ProChild CoLAB</b><small><span lang="pt">Contra a Pobreza e a Exclusão Social</span><span lang="en">Against Poverty and Social Exclusion</span></small></span>
+          </span></li>
         <li class="c-teal"><strong><span lang="pt">Doutoramento</span><span lang="en">PhD programme</span></strong><span><span lang="pt">Programa Doutoral em Psicologia</span><span lang="en">Doctoral Programme in Psychology</span></span></li>
         <li class="c-orange"><strong><span lang="pt">Duração</span><span lang="en">Duration</span></strong><span>2025–2029</span></li>
-        <li class="c-raspberry"><strong><span lang="pt">Financiamento</span><span lang="en">Funding</span></strong><span><span lang="pt">Fundação para a Ciência e Tecnologia (2025.07103.BDANA)</span><span lang="en">Fundação para a Ciência e a Tecnologia (FCT), ref. 2025.07103.BDANA</span></span></li>
+        <li class="c-raspberry"><strong><span lang="pt">Financiamento</span><span lang="en">Funding</span></strong><span><span lang="pt">Fundação para a Ciência e a Tecnologia (2025.07103.BDANA)</span><span lang="en">Fundação para a Ciência e a Tecnologia (FCT), ref. 2025.07103.BDANA</span></span></li>
         <li class="c-navy"><strong><span lang="pt">Ética</span><span lang="en">Ethics</span></strong><span><span lang="pt">Projeto aprovado pela Comissão de Ética da Faculdade de Psicologia e de Ciências da Educação da Universidade do Porto</span><span lang="en">Approved by the Ethics Committee of the Faculty of Psychology and Education Sciences, University of Porto</span></span></li>
       </ul>
     </div>
@@ -518,66 +662,57 @@
     <div class="container">
       <div class="reveal">
         <span class="eyebrow c-teal"><span lang="pt">Como fazemos</span><span lang="en">How we do it</span></span>
-        <h2 class="serif section-title"><span lang="pt">Metodologia</span><span lang="en">Methods <em>at a glance</em></span></h2>
-      <p class="section-intro" lang="pt">Para compreender a transição do acolhimento familiar para a adoção, acompanhamos estes percursos ao longo do tempo, ouvimos as várias pessoas que o vivem e combinamos diferentes formas de recolher informação</p>
-        <p class="section-intro" lang="en">To understand the transition from foster care to adoption, we follow these journeys over time, listen to the different people who live it and combine different ways of gathering information</p>
+        <h2 class="serif section-title"><span lang="pt">Metodologia</span><span lang="en">Methods</span></h2>
       </div>
 
-      <div class="method-cells reveal">
-        <div class="method-cell c-plum"><span class="num">01</span>
+      <div class="methods-light reveal">
+        <div class="m-item" style="--col:var(--plum)">
+          <span class="m-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
           <h3><span lang="pt">Longitudinal</span><span lang="en">Longitudinal</span></h3>
           <p lang="pt">Acompanhamos crianças e famílias em vários momentos da transição, para perceber como as coisas mudam ao longo do tempo</p>
-          <p lang="en">We follow children and families at several points during the transition, to understand how things change over time</p></div>
-        <div class="method-cell c-orange"><span class="num">02</span>
+          <p lang="en">We follow children and families at several points during the transition, to understand how things change over time</p>
+        </div>
+        <div class="m-item" style="--col:var(--orange)">
+          <span class="m-icon"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
           <h3><span lang="pt">Multimétodo</span><span lang="en">Multi-method</span></h3>
           <p lang="pt">Combinamos diferentes métodos de recolha e análise de dados, para uma compreensão mais aprofundada</p>
-          <p lang="en">We combine different methods of data collection and analysis, for a more comprehensive understanding</p></div>
-        <div class="method-cell c-green"><span class="num">03</span>
+          <p lang="en">We combine different methods of data collection and analysis, for a more comprehensive understanding</p>
+        </div>
+        <div class="m-item" style="--col:var(--green)">
+          <span class="m-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c0-3.5 2.5-6 5.5-6s5.5 2.5 5.5 6"/><path d="M14 14.5c.9-.6 1.9-1 3-1 2.6 0 4.5 2.2 4.5 5.5"/></svg></span>
           <h3><span lang="pt">Multi-informante</span><span lang="en">Multi-informant</span></h3>
           <p lang="pt">Ouvimos as várias pessoas envolvidas na transição: crianças, famílias e profissionais</p>
-          <p lang="en">We listen to the different people involved in the transition: children, families and practitioners</p></div>
-        <div class="method-cell c-raspberry"><span class="num">04</span>
+          <p lang="en">We listen to the different people involved in the transition: children, families and practitioners</p>
+        </div>
+        <div class="m-item" style="--col:var(--raspberry)">
+          <span class="m-icon"><svg viewBox="0 0 24 24"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2v2l-3-2h-4"/></svg></span>
           <h3><span lang="pt">Participativo</span><span lang="en">Participatory</span></h3>
           <p lang="pt">As crianças colaboram na construção do projeto, através do Grupo Consultivo</p>
-          <p lang="en">Young people collaborate in shaping the project, through the Advisory Group</p></div>
+          <p lang="en">Children collaborate in shaping the project, through the Advisory Group</p>
+        </div>
       </div>
-             <div class="reveal" id="timeline">
-                <div class="road-head">
-          <h3 class="road-title"><span lang="pt">Onde estamos</span><span lang="en">Where <em>we are</em></span></h3>
+
+      <div class="reveal" id="timeline">
+        <h3 class="now-title"><span lang="pt">Onde <em>estamos</em> agora</span><span lang="en">Where <em>we are</em> now</span></h3>
+        <!-- A etapa atual e a percentagem calculam-se sozinhas a partir das datas abaixo (ano-mês). -->
+        <div class="now-card" id="nowCard">
+          <div class="now-left">
+            <span class="now-pill" id="nowPill"></span>
+            <h4 class="now-stage" id="nowStage"></h4>
+            <p class="now-count" id="nowCount"></p>
+          </div>
+          <div class="now-right">
+            <div class="now-pct"><span id="nowPct">0</span><small>%</small></div>
+            <p><span lang="pt">do percurso do projeto (2025–2029)</span><span lang="en">of the project's journey (2025–2029)</span></p>
+            <div class="now-bar"><i id="nowBar"></i></div>
+          </div>
         </div>
-        <!-- Para mudar uma etapa, edite data-start e data-end (ano-mês). O estado atualiza-se sozinho. -->
-        <div class="road-scroll">
-          <ol class="road" id="road">
-            <li style="--col:var(--plum)" data-start="2025-09" data-end="2026-09">
-              <div class="road-pin"><span><span lang="pt">Estamos aqui</span><span lang="en">We are here</span></span></div>
-              <div class="road-bar"><span class="road-num">01</span><span class="road-check">✓</span></div>
-              <span class="when">2025 – 2026</span>
-              <h3><span lang="pt">Preparar o projeto</span><span lang="en">Getting ready</span></h3>
-              <span class="status"></span>
-            </li>
-            <li style="--col:var(--orange)" data-start="2026-05" data-end="2028-05">
-              <div class="road-pin"><span><span lang="pt">Estamos aqui</span><span lang="en">We are here</span></span></div>
-              <div class="road-bar"><span class="road-num">02</span><span class="road-check">✓</span></div>
-              <span class="when">2026 – 2028</span>
-              <h3><span lang="pt">Ouvir as crianças, famílias e profissionais</span><span lang="en">Listening to children, families and practitioners</span></h3>
-              <span class="status"></span>
-            </li>
-            <li style="--col:var(--green)" data-start="2027-03" data-end="2028-09">
-              <div class="road-pin"><span><span lang="pt">Estamos aqui</span><span lang="en">We are here</span></span></div>
-              <div class="road-bar"><span class="road-num">03</span><span class="road-check">✓</span></div>
-              <span class="when">2027 – 2028</span>
-              <h3><span lang="pt">Analisar o que aprendemos</span><span lang="en">Making sense of what we learned</span></h3>
-              <span class="status"></span>
-            </li>
-            <li style="--col:var(--teal)" data-start="2029-01" data-end="2029-12">
-              <div class="road-pin"><span><span lang="pt">Estamos aqui</span><span lang="en">We are here</span></span></div>
-              <div class="road-bar"><span class="road-num">04</span><span class="road-check">✓</span></div>
-              <span class="when">2029</span>
-              <h3><span lang="pt">Partilha das conclusões</span><span lang="en">Sharing results</span></h3>
-              <span class="status"></span>
-            </li>
-        </div>
-        <p class="road-hint"><span lang="pt">Deslize para o lado para ver as etapas →</span><span lang="en">Swipe sideways to see all stages →</span></p>
+        <ol class="now-steps" id="nowSteps">
+          <li style="--col:var(--plum)" data-start="2025-09" data-end="2026-09" data-when="2025 – 2026"><span lang="pt">Preparar o projeto</span><span lang="en">Getting ready</span></li>
+          <li style="--col:var(--orange)" data-start="2026-05" data-end="2028-05" data-when="2026 – 2028"><span lang="pt">Ouvir as crianças, famílias e profissionais</span><span lang="en">Listening to children, families and practitioners</span></li>
+          <li style="--col:var(--green)" data-start="2027-03" data-end="2028-09" data-when="2027 – 2028"><span lang="pt">Analisar o que aprendemos</span><span lang="en">Making sense of what we learned</span></li>
+          <li style="--col:var(--teal)" data-start="2029-01" data-end="2029-12" data-when="2029"><span lang="pt">Partilha das conclusões</span><span lang="en">Sharing the conclusions</span></li>
+        </ol>
       </div>
     </div>
   </section>
@@ -587,30 +722,30 @@
     <div class="container yag-grid">
       <div class="reveal">
         <span class="eyebrow c-orange"><span lang="pt">A voz das crianças</span><span lang="en">Children's voices</span></span>
-        <h2 class="serif section-title"><span lang="pt">Grupo <em>Consultivo</em> de Crianças</span><span lang="en">Children <em>Advisory</em> Group</span></h2>
-        <p lang="pt">[Explique o que é o grupo: um pequeno grupo de jovens que aconselha a equipa de investigação. Diga porque é que a perspetiva deles é importante, p. ex. a investigação sobre jovens deve ser construída com jovens.]</p>
-        <p lang="en">[Explain what the group is: a small group of young people who advise the research team. Say why their perspective matters, e.g. research about young people should be shaped by young people.]</p>
-        <p style="margin-top:16px" lang="pt">[Diga com que frequência se reúnem e que a participação é voluntária, com o consentimento dos pais ou cuidadores.]</p>
-        <p style="margin-top:16px" lang="en">[Say how often they meet and that taking part is voluntary, with consent from parents or carers.]</p>
-        <span class="pill"><span><span lang="pt">[p. ex. 6 jovens · 12–17 anos · reuniões trimestrais]</span><span lang="en">[e.g. 6 members · aged 12–17 · meeting every 3 months]</span></span></span>
+        <h2 class="serif section-title"><span lang="pt">Grupo <em>Consultivo</em> de Crianças</span><span lang="en">Children's <em>Advisory</em> Group</span></h2>
+        <p lang="pt">O Grupo Consultivo junta 6 a 8 crianças que já viveram uma «mudança de casa». Ninguém conhece melhor esta experiência do que quem a viveu: por isso, as crianças ajudam-nos a construir o projeto.</p>
+        <p lang="en">The Advisory Group brings together 6 to 8 children who have already experienced "moving home". No one knows this experience better than those who have lived it, so the children help us shape the project.</p>
+        <p style="margin-top:16px" lang="pt">Ouvir as crianças é um direito, reconhecido na Convenção sobre os Direitos da Criança, e torna a investigação melhor: as suas perspetivas ajudam-nos a fazer as perguntas certas e a chegar a respostas que fazem sentido para quem vive estas transições.</p>
+        <p style="margin-top:16px" lang="en">Listening to children is a right, recognised in the UN Convention on the Rights of the Child, and it makes research better: their perspectives help us ask the right questions and reach answers that make sense to those who live these transitions.</p>
+        <span class="pill"><span><span lang="pt">Em formação</span><span lang="en">Being formed</span></span></span>
       </div>
       <div class="yag-cards reveal">
         <div class="yag-card" style="--bar:var(--teal)">
-          <h3><span lang="pt">Rever materiais</span><span lang="en">Review materials</span></h3>
-          <p lang="pt">Verificam se as folhas informativas e as atividades são claras e acessíveis</p>
-          <p lang="en">They check that information sheets and activities are clear and friendly</p></div>
+          <h3><span lang="pt">Testar instrumentos</span><span lang="en">Test our tools</span></h3>
+          <p lang="pt">Experimentam os questionários e as atividades antes do estudo e dizem-nos o que é claro, confuso ou difícil</p>
+          <p lang="en">They try out questionnaires and activities before the study and tell us what is clear, confusing or difficult</p></div>
         <div class="yag-card" style="--bar:var(--green)">
-          <h3><span lang="pt">Interpretar resultados</span><span lang="en">Make sense of findings</span></h3>
-          <p lang="pt">Ajudam a interpretar os resultados do ponto de vista de uma criança</p>
-          <p lang="en">[They help interpret results from a children's point of view</p></div>
+          <h3><span lang="pt">Escrever relatórios</span><span lang="en">Write reports</span></h3>
+          <p lang="pt">Ajudam a escrever relatórios <em>child-friendly</em>, pensados para outras crianças e jovens</p>
+          <p lang="en">They help write child-friendly reports for other children and young people</p></div>
         <div class="yag-card" style="--bar:var(--raspberry)">
-          <h3><span lang="pt">Partilhar os resultados</span><span lang="en">Share the results</span></h3>
-          <p lang="pt">Co-criam materiais adaptados para crianças e jovens</p>
-          <p lang="en">They co-create child-friendly outputs</p></div>
-             <div class="yag-card" style="--bar:var(--plum)">
-          <h3><span lang="pt">Definir prioridades</span><span lang="en">Define priorities</span></h3>
-          <p lang="pt">Ajudam a decidir o que é importante que os adultos saibam sobre o projeto e os resultados</p>
-          <p lang="en">They help decide what is important for adults to know about the project and its results</p></div>
+          <h3><span lang="pt">Analisar resultados</span><span lang="en">Make sense of findings</span></h3>
+          <p lang="pt">Ajudam a dar sentido aos resultados, trazendo a perspetiva de quem também é criança</p>
+          <p lang="en">They help make sense of the results, bringing the perspective of someone who is also a child</p></div>
+        <div class="yag-card" style="--bar:var(--plum)">
+          <h3><span lang="pt">Definir prioridades</span><span lang="en">Set priorities</span></h3>
+          <p lang="pt">Ajudam a decidir o que é mais importante que famílias, profissionais e decisores saibam sobre a experiência das crianças</p>
+          <p lang="en">They help decide what families, practitioners and decision-makers most need to know about children's experiences</p></div>
       </div>
     </div>
   </section>
@@ -621,8 +756,8 @@
       <div class="reveal">
         <span class="eyebrow c-green"><span lang="pt">O que estamos a aprender</span><span lang="en">What we're learning</span></span>
         <h2 class="serif section-title"><span lang="pt">Resultados <em>e</em> publicações</span><span lang="en">Results <em>&amp;</em> outputs</span></h2>
-        <p class="section-intro" lang="pt">Os resultados vão sendo partilhados aqui ao longo do projeto, em formatos pensados para famílias, jovens e investigadores.</p>
-        <p class="section-intro" lang="en">Results will be shared here as the project progresses, in formats for families, young people and researchers.</p>
+        <p class="section-intro" lang="pt">Os resultados vão sendo partilhados aqui ao longo do projeto, em formatos pensados para famílias, crianças, profissionais e investigadores.</p>
+        <p class="section-intro" lang="en">Results will be shared here as the project progresses, in formats for families, children, practitioners and researchers.</p>
       </div>
       <div class="results-grid reveal">
         <article class="result-card" style="--bar:var(--raspberry)">
@@ -659,7 +794,7 @@
   <section class="section" id="team">
     <div class="container">
       <div class="reveal">
-        <span class="eyebrow c-navy"><span lang="pt">Quem somos</span><span lang="en">Who we are</span></span>
+        <span class="eyebrow c-plum"><span lang="pt">Quem somos</span><span lang="en">Who we are</span></span>
         <h2 class="serif section-title"><span lang="pt">Equipa de <em>investigação</em></span><span lang="en">Research <em>team</em></span></h2>
       </div>
       <!--
@@ -667,7 +802,7 @@
         por: <img src="fotografia.jpg" alt="Fotografia de [Nome]"> e carregue a fotografia para a mesma pasta no GitHub.
       -->
       <div class="team-grid reveal">
-        <div class="person c-raspberry" style="--bar:var(--raspberry)">
+        <div class="person c-teal" style="--bar:var(--teal)">
           <div class="avatar">MP</div>
           <h3>Mariana Pinto</h3>
           <p class="role"><span lang="pt">Investigadora</span><span lang="en">PhD Researcher</span></p>
@@ -689,34 +824,26 @@
           <a href="https://orcid.org/0000-0002-5521-8352" target="_blank" rel="noopener"><span lang="pt">Perfil →</span><span lang="en">Profile →</span></a>
         </div>
         <div class="person c-plum" style="--bar:var(--plum)">
-          <div class="avatar"><span lang="pt">GCJ</span><span lang="en">YAG</span></div>
-          <h3><span lang="pt">Grupo Consultivo de Jovens</span><span lang="en">Youth Advisory Group</span></h3>
+          <div class="avatar"><span lang="pt">GCC</span><span lang="en">CAG</span></div>
+          <h3><span lang="pt">Grupo Consultivo de Crianças</span><span lang="en">Children's Advisory Group</span></h3>
           <p class="role"><span lang="pt">Consultores</span><span lang="en">Advisors</span></p>
-          <p class="inst"><span lang="pt">Em breve!</span><span lang="en">Coming soon!</span></p>
+          <p class="inst"><span lang="pt">6 a 8 crianças</span><span lang="en">6 to 8 children</span></p>
           <a href="#advisory"><span lang="pt">Sobre o grupo →</span><span lang="en">About the group →</span></a>
         </div>
-      </div>
       </div>
     </div>
   </section>
 
+
+
   <!-- ================= CONTACTOS / CONTACT ================= -->
-   <section class="band band-yellow contact-card-section" id="contact">    <div class="container">
-      <div class="contact-card reveal">
-        <div>
-          <span class="eyebrow"><span lang="pt">Fale connosco</span><span lang="en">Get in touch</span></span>
-          <h2 class="serif section-title"><span lang="pt">Contactos</span><span lang="en">Contact</span></h2>
-          <p lang="pt">Tem perguntas sobre o projeto? Terei todo o gosto em responder.</p>
-          <p lang="en">Questions about the project? I'd be happy to hear from you.</p>
-          <a class="btn btn-solid" href="mailto:up201906949@edu.fpce.up.pt"><span lang="pt">Enviar e-mail</span><span lang="en">Send an email</span></a>
-        </div>
-        <ul class="contact-card-list">
-          <li style="--c:var(--plum)"><i class="contact-dot"></i><div><strong><span lang="pt">Investigadora</span><span lang="en">Researcher</span></strong>Mariana Pinto</div></li>
-          <li style="--c:var(--raspberry)"><i class="contact-dot"></i><div><strong>E-mail</strong><a href="mailto:up201906949@edu.fpce.up.pt">up201906949@edu.fpce.up.pt</a></div></li>
-          <li style="--c:var(--green)"><i class="contact-dot"></i><div><strong><span lang="pt">Instituição</span><span lang="en">Institution</span></strong><span lang="pt">Centro de Psicologia da Universidade do Porto</span><span lang="en">Center for Psychology at the University of Porto</span></div></li>
-          <li style="--c:#1f8f9c"><i class="contact-dot"></i><div><strong><span lang="pt">Morada</span><span lang="en">Address</span></strong>Rua Alfredo Allen, 4200-135 Porto, Portugal</div></li>
-        </ul>
-      </div>
+  <section class="band band-yellow contact-simple" id="contact">
+    <div class="container reveal">
+      <span class="eyebrow c-navy"><span lang="pt">Contactos</span><span lang="en">Contact</span></span>
+      <h2 class="serif section-title"><span lang="pt">Fale <em>connosco</em></span><span lang="en">Get in <em>touch</em></span></h2>
+      <p class="footer-contact-text"><span lang="pt">Tem perguntas sobre o projeto? Escreva-nos para</span><span lang="en">Questions about the project? Write to</span></p>
+      <a class="footer-mail" href="mailto:up201906949@edu.fpce.up.pt">up201906949@edu.fpce.up.pt</a>
+      <p class="footer-address">Mariana Pinto · <span lang="pt">Centro de Psicologia da Universidade do Porto</span><span lang="en">Center for Psychology at the University of Porto</span><br>Rua Alfredo Allen, 4200-135 Porto, Portugal</p>
     </div>
   </section>
 
@@ -725,17 +852,22 @@
 <!-- ================= RODAPÉ / FOOTER ================= -->
 <footer class="site-footer">
   <div class="container">
-    <span class="eyebrow c-navy"><span lang="pt">Com o apoio de</span><span lang="en">Supported by</span></span>
-    <!-- LOGÓTIPOS: substitua cada caixa por <img src="logo-universidade.png" alt="Nome da universidade" style="height:50px"> -->
-    <div class="funders">
-      <div class="logo-slot"><span lang="pt">[Logótipo da universidade]</span><span lang="en">[University logo]</span></div>
-      <div class="logo-slot"><span lang="pt">[Logótipo do centro de investigação]</span><span lang="en">[Research centre logo]</span></div>
-      <div class="logo-slot"><span lang="pt">[Logótipo da entidade financiadora]</span><span lang="en">[Funder logo]</span></div>
+    <div class="footer-top">
+      
+      <div>
+        <span class="eyebrow c-navy"><span lang="pt">Com o apoio de</span><span lang="en">Supported by</span></span>
+        <!-- LOGÓTIPOS: substitua cada caixa por <img src="logo-universidade.png" alt="Nome da universidade" style="height:50px"> -->
+        <div class="funders">
+          <div class="logo-slot"><span lang="pt">[Logótipo da universidade]</span><span lang="en">[University logo]</span></div>
+          <div class="logo-slot"><span lang="pt">[Logótipo do centro de investigação]</span><span lang="en">[Research centre logo]</span></div>
+          <div class="logo-slot"><span lang="pt">[Logótipo da entidade financiadora]</span><span lang="en">[Funder logo]</span></div>
+        </div>
+      </div>
     </div>
-        <p class="privacy-note" lang="pt"><strong>Privacidade:</strong> este site não utiliza cookies nem recolhe dados pessoais. A única informação guardada no seu navegador é a língua escolhida (PT/EN), que nunca sai do seu dispositivo. O site está alojado no GitHub Pages, que pode registar dados técnicos de acesso, como o endereço IP, por motivos de segurança.</p>
+    <p class="privacy-note" lang="pt"><strong>Privacidade:</strong> este site não utiliza cookies nem recolhe dados pessoais. A única informação guardada no seu navegador é a língua escolhida (PT/EN), que nunca sai do seu dispositivo. O site está alojado no GitHub Pages, que pode registar dados técnicos de acesso, como o endereço IP, por motivos de segurança.</p>
     <p class="privacy-note" lang="en"><strong>Privacy:</strong> this website does not use cookies or collect personal data. The only information stored in your browser is your language choice (PT/EN), which never leaves your device. The site is hosted on GitHub Pages, which may log technical access data, such as IP addresses, for security purposes.</p>
     <div class="footer-base">
-      <span>© [2026] <span lang="pt">[O seu nome] · [Financiamento, p. ex. "Financiado pela FCT, ref.ª …"]</span><span lang="en">[Your Name] · [Funding statement, e.g. "Funded by FCT, ref. …"]</span></span>
+      <span>© 2026 Mariana Pinto · <span lang="pt">Financiado pela Fundação para a Ciência e a Tecnologia (2025.07103.BDANA)</span><span lang="en">Funded by Fundação para a Ciência e a Tecnologia (2025.07103.BDANA)</span></span>
       <span><span lang="pt">Design inspirado em</span><span lang="en">Design inspired by</span> <a href="https://templatemo.com/tm-628-lumen-eighty">Lumen Eighty</a> (TemplateMo)</span>
     </div>
   </div>
@@ -747,7 +879,7 @@
 
   // ---- Língua / Language ----
   var TITLES = {
-    pt: Do Acolhimento à Adoção',
+    pt: 'Do Acolhimento Familiar à Adoção',
     en: 'From Foster Care to Adoption'
   };
   function setLang(lang) {
@@ -803,23 +935,27 @@
    
 </script>
   <script>
-  /* ===== PERCURSO: estados e "Estamos aqui" ===== */
+  /* ===== ONDE ESTAMOS AGORA: etapa atual e percentagem ===== */
   (function () {
-    var now = new Date(), placed = false;
-    var L = { done: ['Concluído', 'Completed'], now: ['A decorrer', 'In progress'], next: ['Por começar', 'Coming up'] };
-    document.querySelectorAll('#road li').forEach(function (li) {
-      var s = li.dataset.start.split('-'), e = li.dataset.end.split('-');
-      var start = new Date(+s[0], +s[1] - 1, 1), end = new Date(+e[0], +e[1], 1);
-      var k = li.dataset.status || (now >= end ? 'done' : now >= start ? 'now' : 'next');
-      var p = k === 'done' ? 100 : k === 'next' ? 0 : Math.max(4, Math.min(96, (now - start) / (end - start) * 100));
-      li.classList.add('is-' + k);
-      li.querySelector('.road-bar').style.setProperty('--p', p + '%');
-      var tag = li.querySelector('.status');
-      tag.className = 'status status-' + k;
-      tag.innerHTML = '<span lang="pt">' + L[k][0] + '</span><span lang="en">' + L[k][1] + '</span>';
-      if (k === 'now' && !placed) { placed = true; li.classList.add('is-here'); li.querySelector('.road-pin').style.left = p + '%'; }
+    var steps = document.querySelectorAll('#nowSteps li');
+    if (!steps.length) return;
+    var START = new Date(2025, 8, 1), END = new Date(2030, 0, 1), now = new Date();
+    function d(s, endOfMonth) { var p = s.split('-'); return new Date(+p[0], +p[1] - (endOfMonth ? 0 : 1), 1); }
+    var current = null, idx = 0;
+    steps.forEach(function (li, i) {
+      var end = d(li.dataset.end, true);
+      if (now >= end) li.classList.add('is-done');
+      else if (!current) { current = li; idx = i; li.classList.add('is-now'); }
     });
+    if (!current) { current = steps[steps.length - 1]; idx = steps.length - 1; }
+    var pct = Math.round(Math.max(0, Math.min(100, (now - START) / (END - START) * 100)));
+    document.getElementById('nowCard').style.setProperty('--col', current.style.getPropertyValue('--col'));
+    document.getElementById('nowPill').innerHTML = '<span lang="pt">Agora</span><span lang="en">Now</span> · ' + current.dataset.when;
+    document.getElementById('nowStage').innerHTML = current.innerHTML;
+    document.getElementById('nowCount').innerHTML = '<span lang="pt">Etapa ' + (idx + 1) + ' de ' + steps.length + ' do projeto.</span><span lang="en">Stage ' + (idx + 1) + ' of ' + steps.length + ' of the project.</span>';
+    document.getElementById('nowPct').textContent = pct;
+    document.getElementById('nowBar').style.width = pct + '%';
   })();
-</script>
+  </script>
 </body>
 </html>
