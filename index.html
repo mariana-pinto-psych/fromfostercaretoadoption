@@ -382,6 +382,15 @@
     .road-note { margin-top: 30px; font-size: 14px; color: var(--muted); }
     .road-hint { display: none; font-size: 12px; font-weight: 600; color: var(--muted); margin-top: 6px; }
     @media (max-width: 760px) { .road { grid-template-columns: repeat(4, 220px); } .road-hint { display: block; } }
+        /* ===== Ilustração do topo: caminho com paragens ===== */
+    .hero-art { height: auto; }
+    .hero-art svg { width: 100%; height: auto; display: block; overflow: visible; }
+    .art-pop { transform-box: fill-box; transform-origin: center; animation: artPop .8s cubic-bezier(.16,1,.3,1) both; }
+    @keyframes artPop { from { transform: scale(0); } to { transform: scale(1); } }
+    .art-fade { opacity: 0; animation: artFade 1.2s ease .6s forwards; }
+    @keyframes artFade { to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .art-pop, .art-fade { animation: none; opacity: 1; } }
+    @media (max-width: 900px) { .hero-art { height: auto; max-width: 420px; } }
   </style>
 </head>
 <body>
@@ -434,11 +443,27 @@
           <a href="#contact" class="btn"><span lang="pt">Contacte-nos</span><span lang="en">Contact us</span></a>
         </div>
       </div>
-      <div class="hero-art reveal" aria-hidden="true">
-        <span class="hero-meta"><span lang="pt">Crianças · Famílias · Investigação</span><span lang="en">Children · Families · Research</span></span>
-        <div class="sun"></div>
-        <div class="ring"></div>
-        <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="hero-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 520 440">
+          <circle class="art-pop" cx="430" cy="70" r="56" fill="#f7bf0d" style="animation-delay:.1s"/>
+          <path d="M58 404 C 160 410, 120 300, 250 290 S 380 330, 400 220 S 430 150, 470 140" fill="none" stroke="#eef0f8" stroke-width="34" stroke-linecap="round"/>
+          <path class="art-fade" d="M58 404 C 160 410, 120 300, 250 290 S 380 330, 400 220 S 430 150, 470 140" fill="none" stroke="#233a80" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 12"/>
+          <g class="art-pop" style="animation-delay:.3s">
+            <rect x="4" y="364" width="52" height="44" fill="#ad5c9d"/>
+            <path d="M-2 368 L30 340 L62 368 Z" fill="#e5004e"/>
+            <rect x="14" y="378" width="12" height="12" fill="#fff" opacity=".9"/>
+          </g>
+          <circle class="art-pop" cx="104" cy="394" r="20" fill="#e5004e" stroke="#fff" stroke-width="6" style="animation-delay:.5s"/>
+          <circle class="art-pop" cx="186" cy="318" r="20" fill="#f28a1e" stroke="#fff" stroke-width="6" style="animation-delay:.75s"/>
+          <circle class="art-pop" cx="300" cy="300" r="20" fill="#62a25d" stroke="#fff" stroke-width="6" style="animation-delay:1s"/>
+          <circle class="art-pop" cx="392" cy="236" r="20" fill="#ad5c9d" stroke="#fff" stroke-width="6" style="animation-delay:1.25s"/>
+          <g class="art-pop" style="animation-delay:1.5s">
+            <rect x="438" y="104" width="64" height="54" fill="#38bbc9"/>
+            <path d="M430 108 L470 72 L510 108 Z" fill="#233a80"/>
+            <rect x="452" y="118" width="16" height="16" fill="#f7bf0d"/>
+            <rect x="478" y="128" width="14" height="30" fill="#233a80"/>
+          </g>
+        </svg>
       </div>
     </div>
   </section>
@@ -494,7 +519,7 @@
           <p lang="en">We follow children and families at several points during the transition, to understand how things change over time</p></div>
         <div class="method-cell c-orange"><span class="num">02</span>
           <h3><span lang="pt">Multimétodo</span><span lang="en">Multi-method</span></h3>
-          <p lang="pt">Combinamos diferentes métodos de recolha e análise de dados, para uma compreensão mais aprofundade</p>
+          <p lang="pt">Combinamos diferentes métodos de recolha e análise de dados, para uma compreensão mais aprofundada</p>
           <p lang="en">We combine different methods of data collection and analysis, for a more comprehensive understanding</p></div>
         <div class="method-cell c-green"><span class="num">03</span>
           <h3><span lang="pt">Multi-informante</span><span lang="en">Multi-informant</span></h3>
@@ -507,7 +532,7 @@
       </div>
              <div class="reveal" id="timeline">
                 <div class="road-head">
-          <h3 class="road-title"><span lang="pt">Onde <em>estamos</em></span><span lang="en">Where <em>we are</em></span></h3>
+          <h3 class="road-title"><span lang="pt">Onde estamos</span><span lang="en">Where <em>we are</em></span></h3>
         </div>
         <!-- Para mudar uma etapa, edite data-start e data-end (ano-mês). O estado atualiza-se sozinho. -->
         <div class="road-scroll">
