@@ -329,6 +329,20 @@
       .menu-toggle { display: flex; }
     }
     @media (max-width: 620px) { .brand-text { font-size: 12.5px; max-width: 170px; } }
+
+        /* Contactos: cartão */
+    .contact-card-section { padding: 110px 0; background: var(--cream); }
+    .contact-card { background: #fff; box-shadow: 0 20px 50px rgba(35,58,128,.10); position: relative; padding: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .contact-card::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 8px;
+      background: linear-gradient(90deg, var(--plum) 0 14.28%, var(--raspberry) 0 28.57%, var(--orange) 0 42.85%, var(--yellow) 0 57.14%, var(--green) 0 71.42%, var(--teal) 0 85.71%, var(--navy) 0); }
+    .contact-card p { color: var(--muted); }
+    .contact-card .btn { margin-top: 26px; }
+    .contact-card-list { list-style: none; }
+    .contact-card-list li { display: flex; gap: 16px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .contact-card-list li:last-child { border-bottom: none; }
+    .contact-dot { flex: none; width: 12px; height: 28px; background: var(--c); transform: skewX(-10deg); margin-top: 3px; }
+    .contact-card-list strong { display: block; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--c); }
+    @media (max-width: 900px) { .contact-card { grid-template-columns: 1fr; gap: 36px; padding: 40px 24px; } }
   </style>
 </head>
 <body>
@@ -619,21 +633,23 @@
   </section>
 
   <!-- ================= CONTACTOS / CONTACT ================= -->
-  <section class="contact" id="contact">
-    <div class="container contact-grid">
-      <div class="reveal">
-        <span class="eyebrow"><span lang="pt">Fale connosco</span><span lang="en">Get in touch</span></span>
-        <h2 class="serif section-title"><span lang="pt">Contactos</span><span lang="en">Contact</span></h2>
-        <p lang="pt">Tem perguntas sobre o projeto? Terei todo o gosto em responder.</p>
-        <p lang="en">Questions about the project? I'd be happy to hear from you.</p>
-        <a class="btn" href="mailto:up201906949@edu.fpce.up.pt"><span lang="pt">Enviar e-mail</span><span lang="en">Send an email</span></a>
+  <section class="contact-card-section" id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <div>
+          <span class="eyebrow"><span lang="pt">Fale connosco</span><span lang="en">Get in touch</span></span>
+          <h2 class="serif section-title"><span lang="pt">Contactos</span><span lang="en">Contact</span></h2>
+          <p lang="pt">Tem perguntas sobre o projeto? Terei todo o gosto em responder.</p>
+          <p lang="en">Questions about the project? I'd be happy to hear from you.</p>
+          <a class="btn btn-solid" href="mailto:up201906949@edu.fpce.up.pt"><span lang="pt">Enviar e-mail</span><span lang="en">Send an email</span></a>
+        </div>
+        <ul class="contact-card-list">
+          <li style="--c:var(--plum)"><i class="contact-dot"></i><div><strong><span lang="pt">Investigadora</span><span lang="en">Researcher</span></strong>Mariana Pinto</div></li>
+          <li style="--c:var(--raspberry)"><i class="contact-dot"></i><div><strong>E-mail</strong><a href="mailto:up201906949@edu.fpce.up.pt">up201906949@edu.fpce.up.pt</a></div></li>
+          <li style="--c:var(--green)"><i class="contact-dot"></i><div><strong><span lang="pt">Instituição</span><span lang="en">Institution</span></strong><span lang="pt">Centro de Psicologia da Universidade do Porto</span><span lang="en">Center for Psychology at the University of Porto</span></div></li>
+          <li style="--c:#1f8f9c"><i class="contact-dot"></i><div><strong><span lang="pt">Morada</span><span lang="en">Address</span></strong>Rua Alfredo Allen, 4200-135 Porto, Portugal</div></li>
+        </ul>
       </div>
-      <ul class="contact-list reveal">
-        <li><strong><span lang="pt">Investigadora</span><span lang="en">Researcher</span></strong><span lang="pt">Mariana Pinto</span><span lang="en">Mariana Pinto</span></li>
-        <li><strong>E-mail</strong><a href="mailto:up201906949@edu.fpce.up.pt">up201906949@edu.fpce.up.pt</a></li>
-        <li><strong><span lang="pt">Instituição</span><span lang="en">Institution</span></strong><span lang="pt">Centro de Psicologia da Universidade do Porto</span><span lang="en">Center for Psychology at University of Porto</span></li>
-        <li><strong><span lang="pt">Morada</span><span lang="en">Address</span></strong>Rua Alfredo Allen, 4200-135 Porto, Portugal.</li>
-      </ul>
     </div>
   </section>
 
